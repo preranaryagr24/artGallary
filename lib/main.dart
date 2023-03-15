@@ -1,4 +1,5 @@
 import 'package:artsells/screens/home/homeScreen.dart';
+import 'package:artsells/screens/upload/uploadScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
