@@ -215,6 +215,22 @@ class _UploadScreenState extends State<UploadScreen> {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home, color: Color.fromARGB(198, 53, 238, 192)),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.upload, color: Color.fromARGB(198, 53, 238, 192)),
+            label: 'Upload',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person, color: Color.fromARGB(198, 53, 238, 192)),
+            label: 'Profile',
+          ),
+        ],
+      ),
     );
   }
 }
