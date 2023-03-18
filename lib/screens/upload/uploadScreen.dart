@@ -2,6 +2,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class UploadScreen extends StatefulWidget {
   @override
@@ -60,17 +61,17 @@ class _UploadScreenState extends State<UploadScreen> {
                     fontSize: 24,
                     shadows: <Shadow>[
                       Shadow(
-                        offset: Offset(4.0, 4.0),
+                        offset: Offset(1.0, 1.0),
                         blurRadius: 3.0,
                         color: Color.fromARGB(255, 0, 0, 0),
                       ),
                       Shadow(
-                        offset: Offset(5.0, 5.0),
+                        offset: Offset(2.0, 2.0),
                         blurRadius: 8.0,
                         color: Color.fromARGB(125, 0, 0, 255),
                       ),
                     ],
-                    fontFamily: "Courier"),
+                    fontFamily: GoogleFonts.montserrat().fontFamily),
               ),
               SizedBox(height: 50),
               Container(
@@ -124,7 +125,8 @@ class _UploadScreenState extends State<UploadScreen> {
                             labelText: 'Title',
                             labelStyle: TextStyle(
                                 color: Color.fromARGB(166, 5, 5, 5),
-                                fontFamily: "Times"),
+                                fontFamily:
+                                    GoogleFonts.montserrat().fontFamily),
                           ),
                           validator: (value) {
                             if (value!.isEmpty) {
@@ -143,7 +145,8 @@ class _UploadScreenState extends State<UploadScreen> {
                             labelText: 'Description',
                             labelStyle: TextStyle(
                                 color: Color.fromARGB(166, 5, 5, 5),
-                                fontFamily: "Times"),
+                                fontFamily:
+                                    GoogleFonts.montserrat().fontFamily),
                           ),
                           validator: (value) {
                             if (value!.isEmpty) {
@@ -164,7 +167,8 @@ class _UploadScreenState extends State<UploadScreen> {
                             labelText: 'Price',
                             labelStyle: TextStyle(
                                 color: Color.fromARGB(166, 5, 5, 5),
-                                fontFamily: "Times"),
+                                fontFamily:
+                                    GoogleFonts.montserrat().fontFamily),
                           ),
                           validator: (value) {
                             if (value!.isEmpty) {
@@ -194,6 +198,7 @@ class _UploadScreenState extends State<UploadScreen> {
                               'Submit Art',
                               style: TextStyle(
                                 fontSize: 18.0,
+                                fontFamily: GoogleFonts.montserrat().fontFamily,
                                 fontWeight: FontWeight.bold,
                                 letterSpacing: 1.0,
                               ),
@@ -218,17 +223,16 @@ class _UploadScreenState extends State<UploadScreen> {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home, color: Color.fromARGB(198, 53, 238, 192)),
-            label: 'Home',
-          ),
+              icon: Icon(Icons.home, color: Color.fromARGB(198, 53, 238, 192)),
+              label: "Home"),
           BottomNavigationBarItem(
-            icon: Icon(Icons.upload, color: Color.fromARGB(198, 53, 238, 192)),
-            label: 'Upload',
-          ),
+              icon:
+                  Icon(Icons.upload, color: Color.fromARGB(198, 53, 238, 192)),
+              label: "Upload"),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person, color: Color.fromARGB(198, 53, 238, 192)),
-            label: 'Profile',
-          ),
+              icon:
+                  Icon(Icons.person, color: Color.fromARGB(198, 53, 238, 192)),
+              label: "Profile")
         ],
       ),
     );
