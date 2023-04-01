@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class PostWidget extends StatelessWidget {
   @override
@@ -76,7 +75,7 @@ class PostWidget extends StatelessWidget {
                     Icon(Icons.favorite, color: Colors.red, size: 20),
                     Icon(Icons.add_circle_outline_rounded,
                         color: Colors.grey, size: 20),
-                    Icon(Icons.more_vert)
+                    Icon(Icons.more_vert),
                   ],
                 ),
               )
