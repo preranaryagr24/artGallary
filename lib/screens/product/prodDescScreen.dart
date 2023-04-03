@@ -14,6 +14,9 @@ class _ProdDescScreenState extends State<ProdDescScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
+        iconTheme: IconThemeData(
+          color: Colors.black, //change your color here
+        ),
         elevation: 0,
         title: Text(
           'Art Description',
@@ -43,7 +46,7 @@ class _ProdDescScreenState extends State<ProdDescScreen> {
             ),
             SizedBox(height: 24),
             Text(
-              'Artist Name',
+              'Pablo Es',
               style: GoogleFonts.montserrat(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
@@ -52,7 +55,7 @@ class _ProdDescScreenState extends State<ProdDescScreen> {
             ),
             SizedBox(height: 8),
             Text(
-              'Title of the Art Work',
+              'The bird',
               style: GoogleFonts.montserrat(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -105,25 +108,26 @@ class _ProdDescScreenState extends State<ProdDescScreen> {
                 ),
               ),
             ),
+            SizedBox(height: 32),
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.upload),
-            label: 'Upload',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   items: [
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.home),
+      //       label: 'Home',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.upload),
+      //       label: 'Upload',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.person),
+      //       label: 'Profile',
+      //     ),
+      //   ],
+      // ),
     );
   }
 }

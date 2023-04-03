@@ -1,10 +1,11 @@
+import 'package:artsells/screens/product/prodDescScreen.dart';
 import 'package:flutter/material.dart';
 
 class PostWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-        itemCount: 5,
+        itemCount: 3,
         itemBuilder: (context, index) {
           return Column(
             children: [
@@ -21,11 +22,17 @@ class PostWidget extends StatelessWidget {
                 subtitle: Text('yelahanka,Bangalore'),
                 trailing: Icon(Icons.more_vert),
               ),
-              Container(
-                  height: 300,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          fit: BoxFit.cover, image: AssetImage('')))),
+              InkWell(
+                onTap: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ProdDescScreen())),
+                child: Container(
+                    height: 300,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            fit: BoxFit.cover,
+                            image: NetworkImage(
+                                'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/713jNeMYLFL.SL1280.jpg')))),
+              ),
               ListTile(
                   leading: Wrap(
                     spacing: 10,

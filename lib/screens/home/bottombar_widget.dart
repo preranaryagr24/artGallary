@@ -1,3 +1,4 @@
+import 'package:artsells/screens/upload/uploadScreen.dart';
 import 'package:flutter/material.dart';
 
 class BottombarWidget extends StatelessWidget {
@@ -10,13 +11,20 @@ class BottombarWidget extends StatelessWidget {
           showSelectedLabels: false,
           showUnselectedLabels: false,
           iconSize: 35,
+          // ignore: prefer_const_literals_to_create_immutables
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
+            const BottomNavigationBarItem(
+                icon: Icon(Icons.home), label: 'home'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.add_a_photo_rounded), label: 'add'),
-            BottomNavigationBarItem(
+                icon: IconButton(
+                  onPressed: () => Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => UploadScreen())),
+                  icon: Icon(Icons.add_a_photo_rounded),
+                ),
+                label: 'add'),
+            const BottomNavigationBarItem(
                 icon: Icon(Icons.favorite_outline_rounded), label: 'heart'),
-            BottomNavigationBarItem(icon: CircleAvatar(), label: 'user'),
+            const BottomNavigationBarItem(icon: CircleAvatar(), label: 'user'),
           ]),
     );
   }
